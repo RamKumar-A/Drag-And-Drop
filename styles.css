@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222222;
+  color: #fff;
+}
+.container {
+  background-color: #171717;
+  border-radius: 10px;
+  box-shadow: 0.5px 0.5px 10px 1px #2e2e2e;
+}
+
+.drag__drop {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+#draggable {
+  border: 1px solid #0008ff;
+  width: 5rem;
+  height: 5rem;
+}
+
+#droppable,
+#draggable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#droppable {
+  width: 200px;
+  height: 200px;
+  background-color: #232323;
+  border: 2px dashed #686868;
+  border-radius: 10px;
+}
+
+.file__list {
+  background-color: #1c1c1c;
+  height: 15rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+.file__list .file {
+  list-style-type: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: #121212;
+}
+
+@media (max-width: 360px) {
+  .drag__drop {
+    gap: 0.5rem;
+  }
+  #draggable {
+    width: 4.5rem;
+  }
+  #droppable {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
